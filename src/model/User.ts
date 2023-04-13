@@ -1,6 +1,22 @@
-import { Model, DataTypes, InferAttributes, InferCreationAttributes } from 'sequelize';
+import { Model, DataTypes, InferAttributes, InferCreationAttributes, Optional } from 'sequelize';
 import UserSeq from '../db/seq';
 
+// type UserAttributes = {
+//     id: number;
+//     user_name: string;
+//     password: string;
+//     is_admin: boolean;
+//     createdAt: string;
+//     updatedAt: string;
+// }
+
+// type UserCreationAttributes = Optional<UserAttributes, 'id' | 'createdAt' | 'updatedAt'>;
+
+// interface User extends Model<UserAttributes, UserCreationAttributes> {
+//     user_name: string;
+//     password: string;
+//     is_admin: boolean;
+// }
 interface User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
     user_name: string;
     password: string;

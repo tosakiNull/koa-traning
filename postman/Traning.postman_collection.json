@@ -1,0 +1,777 @@
+{
+	"info": {
+		"_postman_id": "306b1131-f5b8-4ac4-98f1-ab895d66b1af",
+		"name": "Traning",
+		"description": "練習用",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "goods",
+			"item": [
+				{
+					"name": "post upload goods",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "good_file",
+									"type": "file",
+									"src": "/Users/hong-yin/Documents/pic/await waitFor(() = expect (getByText ('202006021147')) . toBeTruthy ()) ;.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publish goods",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"藍芽\",\n    \"goods_price\": 199.00,\n    \"goods_num\": 10,\n    \"goods_img\": \"d76368fb0da27ba932e2d9700. toBeTruthy ()) ;.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update goods",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"藍芽pro\",\n    \"goods_price\": 299.00,\n    \"goods_num\": 5,\n    \"goods_img\": \"d76368fb0da27ba932e2d9700. toBeTruthy ()) ;.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete goods",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"藍芽pro\",\n    \"goods_price\": 299.00,\n    \"goods_num\": 5,\n    \"goods_img\": \"d76368fb0da27ba932e2d9700. toBeTruthy ()) ;.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "off goods",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"藍芽pro\",\n    \"goods_price\": 299.00,\n    \"goods_num\": 5,\n    \"goods_img\": \"d76368fb0da27ba932e2d9700. toBeTruthy ()) ;.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/5/off",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								"5",
+								"off"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "on goods",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_name\": \"藍芽pro\",\n    \"goods_price\": 299.00,\n    \"goods_num\": 5,\n    \"goods_img\": \"d76368fb0da27ba932e2d9700. toBeTruthy ()) ;.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/5/on",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								"5",
+								"on"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get goods",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/goods/?pageNum=1&pageSize=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"goods",
+								""
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goods_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cart/?page_number=1&page_size=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "page_number",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cart",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 20,\n    \"selected\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete carts",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [4,5]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select all cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"all\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/selectAll",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								"selectAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "https://scweb.cwb.gov.tw/zh-tw/history/ajaxhandler"
+					},
+					"response": []
+				},
+				{
+					"name": "postLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    // pm => postman",
+									"    const res = pm.response.json();",
+									"",
+									"    // 變量在這個作用域裡",
+									"    pm.collectionVariables.variables(\"token\", res.result.token);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"test1\",\n    \"password\": \"Qwe123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "https://scweb.cwb.gov.tw/zh-tw/history/ajaxhandler"
+					},
+					"response": []
+				},
+				{
+					"name": "putLogout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						},
+						"description": "https://scweb.cwb.gov.tw/zh-tw/history/ajaxhandler"
+					},
+					"response": []
+				},
+				{
+					"name": "post Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"test1\",\n    \"password\": \"Qwe123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						},
+						"description": "https://scweb.cwb.gov.tw/zh-tw/history/ajaxhandler"
+					},
+					"response": []
+				},
+				{
+					"name": "post ChangePassword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"test2\",\n    \"password\": \"Qwe1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/password?password=Qwe1234",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"password"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "Qwe1234"
+								}
+							]
+						},
+						"description": "https://scweb.cwb.gov.tw/zh-tw/history/ajaxhandler"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "add addr",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consignee\": \"收件人127\",\n    \"phone\": \"1123456789\",\n    \"address\": \"測試地址\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/address/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get addr",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/address/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put addr",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consignee\": \"收件人3\",\n    \"phone\": \"1234567892\",\n    \"address\": \"測試地址\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/address/99",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								"99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete addr",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/address/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set def addr",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/address/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address_id\": 1,\n    \"goods_info\": \"{[],[],[]}\",\n    \"total\": \"299.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/orders/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/orders/?page_num=1&page_size=20&status=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orders",
+								""
+							],
+							"query": [
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								},
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"orders",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page_num",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

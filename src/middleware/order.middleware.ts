@@ -1,11 +1,7 @@
-
 import type { Context, Next } from 'koa';
-import ENV from '@/config/config.default';
 import errorMsg, { ResponseMsg } from '@/constants/error.type';
-import type { StateUser } from './type';
 
-const { cartFormatError } = errorMsg;
-const { JWT_SECRET } = ENV;
+const { orderFormatError } = errorMsg;
 
 // 校驗
 export const validator = (rules:{ [key: string]: any }) => {
@@ -14,9 +10,9 @@ export const validator = (rules:{ [key: string]: any }) => {
             try {
                 ctx.verifyParams(rules)
             } catch (error) {
-                const msg: ResponseMsg = { ...cartFormatError };
+                const msg: ResponseMsg = { ...orderFormatError };
                 msg.result = error;
-                return ctx.app.emit("error", msg, ctx)
+                return ctx.app.emit("error", msg, ctx);
             }
 
             await next();  // 交由下個中間件處理

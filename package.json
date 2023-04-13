@@ -10,7 +10,7 @@
     "watch": "yarn run tslint && npm run watch-ts",
     "watch-ts": "tsc --watch",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "create-table": "npx node-ts ./src/model/"
+    "c-table": "npx ts-node src/model"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",

@@ -24,7 +24,7 @@
 
 ## 建表
 ```javascript
-npx node-ts ./src/model/cart.model.ts
+npx ts-node ./src/model/cart.model.ts
 ```
 
 ## 套件
@@ -80,3 +80,5 @@ npx node-ts ./src/model/cart.model.ts
 * [【學習筆記】TypeScript 基礎入門：從型別談起](https://hackmd.io/@Heidi-Liu/typescript#%E5%9E%8B%E5%88%A5%E8%A8%BB%E8%A7%A3-Type-annotation)
 * [JS 判別是否為陣列 Array](https://ithelp.ithome.com.tw/articles/10219475)
 * [Get a catch block error message with TypeScript](https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript)
+* [如何打造安全的會員管理系統](https://medium.com/@xyz030206/%E5%A6%82%E4%BD%95%E7%B0%A1%E5%96%AE%E5%9C%B0%E6%89%93%E9%80%A0%E5%AE%89%E5%85%A8%E7%9A%84%E6%9C%83%E5%93%A1%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1-97c92c74cb0b)
+* [导入和导出数据](https://postman.org.cn/getting-started/importing-and-exporting-data/)

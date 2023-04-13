@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import KoaLogger from 'koa-logger';
-import { koaBody } from 'koa-body';
+import { HttpMethodEnum, koaBody } from 'koa-body';
 import session from 'koa-session';
 // import parameter from 'koa-parameter';
 import path from 'path';
@@ -26,7 +26,13 @@ app.use(koaBody({
     formidable: {
         uploadDir: staticPath, // 這裡不要用相對路徑(../upload)因為對應的不是當前路徑而是process.cwd()
         keepExtensions: true,
-    }
+    },
+    parsedMethods: [
+        HttpMethodEnum.POST,
+        HttpMethodEnum.PUT,
+        HttpMethodEnum.PATCH,
+        HttpMethodEnum.DELETE,
+    ], // get, head, delete 默認是不會掛在ctx下, 需在koa-body在配置
 }));
 app.use(session(sessionConfig, app));
 app.use(require('koa-static')(staticPath));

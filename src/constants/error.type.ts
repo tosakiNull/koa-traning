@@ -103,7 +103,47 @@ export const errorMsg = {
         code: '10208',
         message: '下架失敗',
         result: '',
-    }
+    },
+    cartFormatError: {
+        code: '10301',
+        message: '購物車格式錯誤',
+        result: '',
+    },
+    addrFormatError: {
+        code: '10401',
+        message: '地址格式錯誤',
+        result: '',
+    },
+    addAddrError: {
+        code: '10402',
+        message: '添加地址失敗',
+        result: '',
+    },
+    getAddrError: {
+        code: '10403',
+        message: '取得地址列表失敗',
+        result: '',
+    },
+    updateAddrError: {
+        code: '10404',
+        message: '更新地址資訊失敗',
+        result: '',
+    },
+    deleteAddrError: {
+        code: '10405',
+        message: '地址刪除失敗',
+        result: '',
+    },
+    orderFormatError: {
+        code: '10501',
+        message: '訂單格式錯誤',
+        result: '',
+    },
+    addrOrderError: {
+        code: '10502',
+        message: '新增訂單錯誤',
+        result: '',
+    },
 } satisfies ErrorMsg;
 
 export default errorMsg;

@@ -2,21 +2,6 @@ import { Op } from 'sequelize';
 import CartModel from '@/model/cart.model';
 import GoodsModel from '@/model/goods.model';
 
-interface UserInfoQuery {
-    id?: number;
-    user_name?: string;
-    password?: string;
-    is_admin?: boolean;
-    createdAt?: string;
-    updatedAt?: string;
-};
-
-type Rsp = {
-    id?: number;
-    user_name?: string;
-    password?: string;
-}
-
 class CartService {
     async createOrUpdate(user_id: number, goods_id: number) {
         const res = await CartModel.findOne({
@@ -45,7 +30,7 @@ class CartService {
         // 不用讓client發兩次request, 一次查完組裝
         const offset = (pageNum - 1) * pageSize;
         const { count, rows } = await CartModel.findAndCountAll({
-            attributes: ['id', 'number', 'selected'], // 要拿取的列
+            attributes: ['id', 'number', 'selected'], // 要拿取的列 attributes => field
             offset,
             limit: pageSize,
             include: { // 連表查詢-與cart.model內的belongsTo對應
@@ -63,6 +48,40 @@ class CartService {
             },
             ret: rows,
         }
+    }
+
+    async patchCarts(query: { id: string, number?: number, selected?: boolean}) {
+        const { id, number, selected } = query;
+
+        const res = await CartModel.findByPk(id);
+
+        if (!res) return '';
+
+        number !== undefined ? (res.number = number) : '';
+        selected !== undefined ? (res.selected = selected) : '';
+
+        return await res.save();
+    }
+
+    async deleteCart(ids: number[]) {
+        console.log(ids);
+
+        const res = await CartModel.destroy({
+            where: {
+                id: {
+                    [Op.in]: ids,
+                }
+            }
+        });
+
+        return res;
+    }
+
+    async selectAllCarts(userId:number, all_selected: boolean = false) {
+        return await CartModel.update(
+            { selected: all_selected },
+            { where: { user_id: userId } }
+        )
     }
 }
 
