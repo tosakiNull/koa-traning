@@ -48,12 +48,3 @@ Goods.sync({
 }); // force 是否強制建表
 
 export default Goods;
-
-
-
-// class GoodsModal extends Model<
-//     InferAttributes<Goods>,
-//     InferCreationAttributes<Goods>
-// > {
-//     declare id: CreationOptional<number>;
-// };

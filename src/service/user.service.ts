@@ -1,4 +1,4 @@
-import UserModel from '@/model/User';
+import UserModel from '@/model/user.model';
 
 interface UserInfoQuery {
     id?: number;
@@ -18,13 +18,11 @@ type Rsp = {
 class UserService {
     /**
      * 取得所有使用者清單
-     *
-     * @returns {Promise<UserInfoQuery>} 使用者列表
      */
-    async getAllUser(): Promise<UserInfoQuery> {
+    async getAllUser() {
         const res = await UserModel.findAll();
 
-        return res as UserInfoQuery;
+        return res;
     }
 
     async createUser(user_name: string, password: string): Promise<Rsp> {

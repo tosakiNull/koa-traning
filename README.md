@@ -56,7 +56,7 @@ npx ts-node ./src/model/cart.model.ts
 * https://medium.com/@rorast.power.game/%E5%9F%BA%E6%96%BCnodejs%E7%9A%84koa2%E5%9F%BA%E6%9C%AC%E6%95%99%E5%AD%B8-67d1ce0bb59a
 * https://www.bilibili.com/video/BV13A411w79h?p=3
 * https://hackmd.io/@Heidi-Liu/note-be201-sequelize
-* https://github.com/puxiao/notes/blob/master/Nodejs(Koa)%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9B%AE%E5%BD%95%E5%88%AB%E5%90%8Dalias.md
+* [Nodejs(Koa)中使用目录别名alias](https://github.com/puxiao/notes/blob/master/Nodejs(Koa)%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9B%AE%E5%BD%95%E5%88%AB%E5%90%8Dalias.md)
 * https://blog.poychang.net/typescript-running-typescript-ts-node/
 * https://hackmd.io/@Heidi-Liu/note-be201-sequelize
 * https://sequelize.org/docs/v6/core-concepts/model-instances/

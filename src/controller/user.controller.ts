@@ -50,14 +50,22 @@ class UserController {
 
         try {
             // 取得用戶訊息 payload 給 id, user_name, is_admin
-            const { password, ...resUser} = await getUserInfo({ user_name });
+            // const { password, ...resUser } = await getUserInfo({ user_name });
+            const res = await getUserInfo({ user_name })
 
-            ctx.body = {
-                code: 0,
-                message: "success",
-                result: {
-                    token: jwt.sign(resUser, JWT_SECRET, { expiresIn: '1d' }), // 過期時間設一天
-                },
+            if (res) {
+                const { password, ...resUser } = res;
+
+                ctx.body = {
+                    code: 0,
+                    message: "success",
+                    result: {
+                        token: jwt.sign(resUser, JWT_SECRET, { expiresIn: '1d' }), // 過期時間設一天
+                    },
+                }
+            } else {
+                console.error('登入錯誤,查無資料'); // 寫log用
+                ctx.app.emit('error', userLoginError, ctx);
             }
         } catch(err) {
             console.error('登入錯誤', err); // 寫log用
